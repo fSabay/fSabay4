@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Rating and Percentage</title>
+    <link rel="shortcut icon" type="image/png" href="Freigelogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="freigeStylesheet.css" />
+    <link rel="stylesheet" href="rating_percentage_operators.css" />
+    <style>
+       section .container {
+            background-image: linear-gradient(to right, #ed92d5 0%, #00ffff 50%, #fca70d 100%);
+        }
+section {
+    position: relative;
+    width: 100%;
+}
+
+section .container {
+    position: relative;
+    width: min(100% - 5em, 854px);
+    height: min(100% - 3em, 854px);
+    margin: auto;
+    top: 40px;
+    padding: 50px;
+    border-radius: 30px;
+    transform: skewX(-5deg);
+    background-image: linear-gradient(to left, #ed92d5 0%, #00ffff 50%, #fca70d 100%);
+    box-shadow: 10px 10px 20px #aa9b9b;
+    text-align: center;
+}
+
+    section .container * {
+        transform: skewX(5deg);
+        margin: 5px;
+    }
+
+    section .container button {
+        width: 90px;
+        height: 40px;
+        border-radius: 5px;
+        cursor: pointer;
+        background: radial-gradient(#b6ff00,#808080);
+    }
+
+        section .container button:hover {
+            background: radial-gradient(#00ffff,#808080);
+            box-shadow: 5px 5px 10px #000000;
+        }
+
+        section .container button:active {
+            background: radial-gradient(#baffb7,#808080);
+            box-shadow: 1px 1px 10px #000000;
+            cursor: grabbing;
+        }
+
+    section .container input {
+        width: 50%;
+        height: 40px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    section .container #Calculate {
+        padding-bottom: 20px;
+    }
+
+    section .container h4 {
+        padding-top: 20px;
+        color: #4b309b;
+        font-size: larger;
+    }
+	.nav_bar {
+    background: #f5335cd1;
+    width: 100%;
+    text-align: center;
+    height: 70px;
+}
+
+    .nav_bar ul {
+        position: relative;
+        top: 9px;
+        display: inline-flex;
+        margin: 3px auto;
+        padding: 10px;
+    }
+    @media screen and (max-width: 845px){
+        .nav_bar {
+            background: #f5335cd1;
+            width: 100%;
+            text-align: center;
+            height: 70px;
+        }
+        .nav_bar ul {
+            padding: 0;
+        }
+        .nav_bar ul li a{
+            padding: 2px;
+        }
+    }
+.nav_bar ul li{
+    list-style: none;
+}
+.nav_bar ul li a{
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    color: #46fa2b;
+    font-weight: 900;
+    font-family: Arial;
+    font-size: 20px;
+    border-radius: 8px;
+}
+.nav_bar ul li a:hover{
+    color:#f7ffff;
+    background-image: linear-gradient(to right, #808080 0%, #6762eb 100%);
+    border-radius: 8px;
+}
+footer {
+    position: absolute;
+    display: flex;
+    height: 4rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-image: linear-gradient(to right, #4cff00 0%, #a7a3c8 50%, #146cd8 100%);
+}
+footer p{
+    margin: auto;
+}
+    </style
+    </style>
+</head>
+<body>
+    <div class="nav_bar">
+        <ul>
+            <li><a href="student.html">Bright Side</a> </li>
+        
+        </ul>
+    </div>
+    <section>
+        <div class="container">
+            <h1 id="Calculate">Rating And Percentage</h1>
+            <label>Your Score   :</label>
+            <input type="text" id="numb1"><br><br>
+            <label>Perfect Score:</label>
+            <input type="text" id="numb2"><br><br>
+
+            <button onclick="percent()">Percentage</button>
+            <button onclick="rating()">Rate</button>
+
+            <div>
+                <h3>Result:</h3>
+                <h4 id="result1"></h4>
+                <hr />
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function percent() {
+            var x = document.getElementById("numb1").value;
+            var y = document.getElementById("numb2").value;
+            var total = parseFloat(x) / parseFloat(y);
+            var total1 = 100 * total;
+            document.getElementById("result1").innerHTML = total1 + "%";
+        }
+
+        function rating() {
+            var x = document.getElementById("numb1").value;
+            var y = document.getElementById("numb2").value;
+            var total = parseFloat(x) / parseFloat(y);
+            if (total < 0.6) {
+                var eqR = 5 - 10 * total / 3;
+                var fixedR = eqR.toFixed(1);
+                document.getElementById("result1").innerHTML = fixedR;
+            } else
+                var eqR = 6 - 5 * total;
+            var fixedR = eqR.toFixed(1);
+            document.getElementById("result1").innerHTML = fixedR;
+        }
+    </script>
+<footer>
+        <p>
+            &copy;2021 SabayF. All rights reserved.<br>
+            - Online For FREE
+        </p>
+    </footer>
+</body>
+</html>

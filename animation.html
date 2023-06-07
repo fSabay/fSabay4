@@ -1,0 +1,248 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>moving box</title>
+		
+		<style>
+		*{
+				box-sizing:border-box;
+			}
+			body{
+				font-family: Arial;
+			}
+			header{
+				background-color: blue;
+				padding:5px;
+				text-align:center;
+				font-size:12px;
+				color:brown;
+			}
+			nav{
+				flaot:center;
+				width:25%;
+				height:300px;
+				background-color:pink;
+				padding:20px;
+			}
+			nav ul{
+				list-style-type:none;
+				padding:0;
+			}
+			article{
+				float:right;
+				padding:20px;
+				width:20%;
+				height:500px;
+				background-color:skyblue;
+				
+			}
+			mid {
+			float:right;
+				padding:20px;
+				width:55%;
+				height:500px;
+				background-image: url('schoolimg.jpg');
+				
+			}
+			section::after{
+				content:"";
+				display:table;
+				clear:both;
+			}
+			footer{
+				background-color:red;
+				padding: 10px;
+				text-align:center;
+				color:black;
+			}
+		
+		.box {
+		width:100px;
+		height:100px;
+		background-color:red;
+		position: absolute;
+		animation-name:moving;
+		animation-duration:5s;
+		animation-delay:1s;
+		animation-iteration-count:infinite;
+		}
+		
+		@keyframes moving{
+			0%{
+			left: 0px; top:0px;
+			background-color: blue;
+			}
+			25%{
+			left: 200px; top:0px;
+			background-color: red;
+			}
+			50%{
+			left: 200px; top:200px;
+			background-color: purple;
+			}
+			75%{
+			left: 0px; top:200px;
+			background-color: green;
+			}
+			100%{
+			left: 0px; top:0px;
+			background-color: blue;
+			}
+		}
+		p {
+		text-align
+		}
+		footer {
+    position: absolute;
+    display: flex;
+    height: 4rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-image: linear-gradient(to right, #4cff00 0%, #a7a3c8 50%, #146cd8 100%);
+}
+footer p{
+    margin: auto;
+	 position: relative;
+}
+.nav_bar {
+    background: #f5335cd1;
+    width: 100%;
+    text-align: center;
+    height: 70px;
+}
+
+    .nav_bar ul {
+        position: relative;
+        top: 9px;
+        display: inline-flex;
+        margin: 3px auto;
+        padding: 10px;
+    }
+    @media screen and (max-width: 845px){
+        .nav_bar {
+            background: #f5335cd1;
+            width: 100%;
+            text-align: center;
+            height: 70px;
+        }
+        .nav_bar ul {
+            padding: 0;
+        }
+        .nav_bar ul li a{
+            padding: 2px;
+        }
+    }
+.nav_bar ul li{
+    list-style: none;
+}
+.nav_bar ul li a{
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    color: #46fa2b;
+    font-weight: 900;
+    font-family: Arial;
+    font-size: 20px;
+    border-radius: 8px;
+}
+.nav_bar ul li a:hover{
+    color:#f7ffff;
+    background-image: linear-gradient(to right, #808080 0%, #6762eb 100%);
+    border-radius: 8px;
+}
+
+		
+		</style>
+	</head>
+	<body>
+	
+	 <div class="nav_bar">
+        <ul>
+            <li><a href="Homepage.html">Home</a> </li>
+            <li><a href="About.html">About</a> </li>
+            <li><a href="signup.html">Student Form</a></li>
+            <li><a href="animation.html">Animation</a> </li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </div>
+<article class="regular">
+	
+	<label for="num1">Type Priority #:</label>
+	<br>
+	<input type="number" id="num1" placeholder="Enter a number" maxlength="10">
+	<br>
+	<input type="button" id="btn1" value="Click for CenterDisplay" >
+	<br>
+	<br>
+	<label for="num2">Type Counter #:</label>
+	<br>
+	<input type="number" id="num2" placeholder="Enter a number" maxlength="10">
+	<br>
+	<input type="button" id="btn2" value="Click for CounterDisplay" >
+	<br>
+	<h1>Counter # </h1><p class="output" id="output2"></p>
+	<br>
+	<br>
+	<label for="num3">SERVING #:</label>
+	<br>
+	<input type="number" id="num3" placeholder="Enter a number" maxlength="10">
+	<br>
+	<input type="button" id="btn3" value="Click for ServingDisplay" >
+	<br>
+	<h1>Priority # </h1><p class="output" id="output3"></p>
+	<br>
+	<br>
+	</article>
+	<mid>
+<div class="box">
+				<p class="output" id="output1"></p>
+			</div>
+	</mid>
+			
+				<nav>
+				<h1>Steps:</h1>
+				<h1>Step 1:</h1>
+				<h1>Step 2:</h1>
+				<h1>Step 3:</h1>
+				
+	</nav>
+	<footer>
+        <p>
+            &copy;2021 SabayF. All rights reserved.<br>
+            - Online For FREE
+        </p>
+    </footer>
+	<script>
+				const txt1 = document.getElementById('num1');
+				const btn1 = document.getElementById('btn1');
+				const out1 = document.getElementById('output1');
+				function fun1(){
+				out1.innerHTML = txt1.value;
+				}
+				btn1.addEventListener('click',fun1);
+				
+				
+				const txt2 = document.getElementById('num2');
+				const btn2 = document.getElementById('btn2');
+				const out2 = document.getElementById('output2');
+				function fun2(){
+				out2.innerHTML = txt2.value;
+				}
+				btn2.addEventListener('click',fun2);
+				
+				const txt3 = document.getElementById('num3');
+				const btn3 = document.getElementById('btn3');
+				const out3 = document.getElementById('output3');
+				function fun3(){
+				out3.innerHTML = txt3.value;
+				}
+				btn3.addEventListener('click',fun3);
+				
+				</script>
+				
+				
+	</body>
+</html>

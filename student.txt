@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>About</title>
+    <link rel="shortcut icon" type="image/png" href="Freigelogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="freigeStylesheet.css" />
+
+<style>
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 8rem;
+    min-height: 100%;
+    overflow-x: hidden;
+    background-color:#9df7f2;
+}
+
+footer {
+    position: absolute;
+    display: flex;
+    height: 4rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-image: linear-gradient(to right, #4cff00 0%, #a7a3c8 50%, #146cd8 100%);
+}
+footer p{
+    margin: auto;
+}
+/*__________________________________________________________*/
+.nav_bar {
+    background: #f5335cd1;
+    width: 100%;
+    text-align: center;
+    height: 70px;
+}
+
+    .nav_bar ul {
+        position: relative;
+        top: 9px;
+        display: inline-flex;
+        margin: 3px auto;
+        padding: 10px;
+    }
+    @media screen and (max-width: 845px){
+        .nav_bar {
+            background: #f5335cd1;
+            width: 100%;
+            text-align: center;
+            height: 70px;
+        }
+        .nav_bar ul {
+            padding: 0;
+        }
+        .nav_bar ul li a{
+            padding: 2px;
+        }
+    }
+.nav_bar ul li{
+    list-style: none;
+}
+.nav_bar ul li a{
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    color: #46fa2b;
+    font-weight: 900;
+    font-family: Arial;
+    font-size: 20px;
+    border-radius: 8px;
+}
+.nav_bar ul li a:hover{
+    color:#f7ffff;
+    background-image: linear-gradient(to right, #808080 0%, #6762eb 100%);
+    border-radius: 8px;
+}
+
+.container1 {
+    width: min(100% - 5em, 1100px);
+    margin: 30px auto;
+    display: flex;
+    position: relative;
+    display: block;
+    text-align: justify;
+    background: #1dca75;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #808080;
+    padding: 20px;
+}
+.container1 h1 {
+    text-align: center;
+    background-image: linear-gradient(to right, #52fb44 0%, #72eeb5 50%, #2577fa 100%);
+    box-shadow: 10px 10px 20px #808080;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}.container1 h3 {
+    padding-bottom: 10px;
+}
+.swiper {
+    width: 100%;
+    height: 500px ;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+</style>
+</head>
+<body>
+    <div class="nav_bar">
+        <ul>
+            <li><a href="Homepage.html">Home</a> </li>
+            <li><a href="About.html">About</a> </li>
+            <li><a href="Contact.html">Contact</a></li>
+			<li><a href="student.html">STUDENT</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img height="500" src="https://www.hubspot.com/hubfs/elearning-wordpress-themes.jpg"></div>
+                <div class="swiper-slide"><img height="500" src="https://usjr.edu.ph/wp-content/uploads/2016/06/BSED-Math-600x400.jpg"></div>
+                <div class="swiper-slide"><img height="500" src="https://www.talaviation.com/Talaviation/UploadFiles/pgallery/201612711253290.jpg"></div>
+            </div>
+            <div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </div>
+        <div class="container1">
+            <h1>Introducing</h1>
+                <h3>SABAY UNIVERSITY</h3>
+                <p>
+                    Renowned for its commitment to excellence, the SABAY UNIVERSITY develops its students’ professional competence, character, and social transformation. Since its founding, SU offers its learners varied academic environments that foster academic excellence and lifelong learning, developing future professionals who will leave their marks as leaders in their respective fields.
+                </p>
+        </div>
+    <footer>
+        <p>
+            &copy;2021 SabayF. All rights reserved.<br>
+            - Online For FREE
+        </p>
+    </footer>
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            loop: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+</body>
+</html>

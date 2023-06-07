@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Log IN</title>
+    <link rel="shortcut icon" type="image/png" href="Freigelogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="freigeStylesheet.css" />
+
+<style>
+element.style {
+    background-color: #ffffff2e;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+ button {
+
+            box-shadow: 10px 10px 10px #455c80;
+            margin-bottom: 30px;
+            margin-right: 30px;
+        }
+		button:hover {
+                box-shadow: 0px 0px 0px #455c80;
+            }
+			.featurette-image {
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .featurette-image:hover {
+            box-shadow: 20px 20px 40px #381d1d;
+        }
+		main{
+            position: absolute;
+            margin: 50px;
+            top: 50px;
+        }
+        .col-md-7 img {
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+        }
+		
+		h1{
+		text-align: center;
+		}
+		p{
+		text-align: center;
+		}
+		@import "compass/css3";
+
+$body-bg: #c1bdba;
+$form-bg: #13232f;
+$white: #ffffff;
+
+$main: #1ab188;
+$main-light: lighten($main,5%);
+$main-dark: darken($main,5%);
+
+$gray-light: #a0b3b0;
+$gray: #ddd;
+
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+	overflow-y: scroll; 
+}
+
+body {
+  background:$body-bg;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+  text-decoration:none;
+  color:$main;
+  transition:.5s ease;
+  &:hover {
+    color:$main-dark;
+  }
+}
+
+.form {
+  background:rgba($form-bg,.9);
+  padding: 40px;
+  max-width:600px;
+  margin:40px auto;
+  border-radius:$br;
+  box-shadow:0 4px 10px 4px rgba($form-bg,.3);
+}
+
+.tab-group {
+  list-style:none;
+  padding:0;
+  margin:0 0 40px 0;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  li a {
+    display:block;
+    text-decoration:none;
+    padding:15px;
+    background:rgba($gray-light,.25);
+    color:$gray-light;
+    font-size:20px;
+    float:left;
+    width:50%;
+    text-align:center;
+    cursor:pointer;
+    transition:.5s ease;
+    &:hover {
+      background:$main-dark;
+      color:$white;
+    }
+  }
+  .active a {
+    background:$main;
+    color:$white;
+  }
+}
+
+.tab-content > div:last-child {
+  display:none;
+}
+
+
+h1 {
+  text-align:center;
+  color:$white;
+  font-weight:$thin;
+  margin:0 0 40px;
+}
+
+label {
+  position:absolute;
+  transform:translateY(6px);
+  left:13px;
+  color:rgba($white,.5);
+  transition:all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size:22px;
+  .req {
+  	margin:2px;
+  	color:$main;
+  }
+}
+
+label.active {
+  transform:translateY(50px);
+  left:2px;
+  font-size:14px;
+  .req {
+    opacity:0;
+  }
+}
+
+label.highlight {
+	color:$white;
+}
+
+input, textarea {
+  font-size:22px;
+  display:block;
+  width:100%;
+  height:100%;
+  padding:5px 10px;
+  background:none;
+  background-image:none;
+  border:1px solid $gray-light;
+  color:$white;
+  border-radius:0;
+  transition:border-color .25s ease, box-shadow .25s ease;
+  &:focus {
+		outline:0;
+		border-color:$main;
+  }
+}
+
+textarea {
+  border:2px solid $gray-light;
+  resize: vertical;
+}
+
+.field-wrap {
+  position:relative;
+  margin-bottom:40px;
+}
+
+.top-row {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  > div {
+    float:left;
+    width:48%;
+    margin-right:4%;
+    &:last-child { 
+      margin:0;
+    }
+  }
+}
+
+.button {
+  border:0;
+  outline:none;
+  border-radius:0;
+  padding:15px 0;
+  font-size:2rem;
+  font-weight:$bold;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  background:$main;
+  color:$white;
+  transition:all.5s ease;
+  -webkit-appearance: none;
+  &:hover, &:focus {
+    background:$main-dark;
+  }
+}
+
+.button-block {
+  display:block;
+  width:100%;
+}
+
+.forgot {
+  margin-top:-20px;
+  text-align:right;
+}
+.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid blue;
+  padding: 5px;
+ text-align: center;
+}
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 200px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style>
+</head>
+<body>
+     <button class="button button-block" onclick="window.location.href = 'About.html';">Go Back</button>
+	 <div class="form" onclick="window.location.href = 'About.html';">
+	<div id="login">   
+          <h1>Welcome Back!</h1>
+		  
+		  
+		<a href="default.asp" target="_blank" style="background-color:blue;">
+		<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/2048px-Facebook_icon_2013.svg.png" alt="facebook" style="float:right;width:42px;height:42px;">Log in with FACEBOOK</a>
+		<p></p>
+		<a href="default.asp" target="_blank" style="background-color:red">
+		<img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="google" style="float:right;width:42px;height:42px;">Log in with GoogleMAIL<br></a>
+			 
+
+		  <p>__________or__________</p>
+		  <h1>Log In</h1>
+          
+          <form action="/" method="post">
+          	<p>Email Address</p>
+            <div class="field-wrap">
+            
+            <input type="email"required autocomplete="off"/>
+          </div>
+          	<p>Password</p>
+          <div class="field-wrap">
+         
+            <input type="password"required autocomplete="off"/>
+          </div>
+          
+          <p><a >Forgot Password?</a></p>
+          
+          <button type="submit" class="button button-block" onclick="window.location.href = 'About.html';"/>Log In</button>
+          
+          </form>
+
+        </div>
+		
+        </div>
+      
+</body>
+</html>

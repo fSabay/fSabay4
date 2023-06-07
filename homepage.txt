@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Page</title>
+    <link rel="shortcut icon" type="image/png" href="Freigelogo.png">
+    <link rel="stylesheet" href="freigeStylesheet.css" />
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: blue;
+            color: #ffffff;
+        }
+
+        button {
+
+            box-shadow: 10px 10px 10px #455c80;
+            margin-bottom: 30px;
+            margin-right: 30px;
+        }
+
+            button:hover {
+                box-shadow: 0px 0px 0px #455c80;
+            }
+        .featurette-image {
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .featurette-image:hover {
+            box-shadow: 20px 20px 40px #381d1d;
+        }
+        
+        main{
+            position: absolute;
+            margin: 50px;
+            top: 50px;
+        }
+        .col-md-7 img {
+            height: 100px;
+            width: 100px;
+            display: inline-block;
+        }
+		*{
+				box-sizing:border-box;
+			}
+			body{
+				font-family: Arial;
+			}
+			header{
+				background-color: blue;
+				padding:5px;
+				text-align:center;
+				font-size:12px;
+				color:brown;
+			}
+			nav{
+				flaot:left;
+				width:30%;
+				height:300px;
+				background-color:green;
+				padding:20px;
+			}
+			nav ul{
+				list-style-type:none;
+				padding:0;
+			}
+			article{
+				float:left;
+				padding:20px;
+				width:70%;
+				background-color:grey;
+				height:300px;
+			}
+			section::after{
+				content:"";
+				display:table;
+				clear:both;
+			}
+			footer{
+				background-color:red;
+				padding: 10px;
+				text-align:center;
+				color:black;
+			}
+    </style>
+
+</head>
+<body>
+
+<h2>Styling Layout Float</h2>
+	<p>this html code shows a header, two columns/boxes & a footer</p>
+	
+	<header>
+	<h2> Philippines Cities</h2>
+	</header>
+	
+	<section>
+		<nav>
+			<ul>
+				<li><a href="#">manila</a></li>
+				<li><a href="#">Cebu</a></li>
+				<li><a href="#">Davao</a></li>
+			</ul>
+		</nav>
+		<article>
+			<h1>Manila</h1>
+			<p>Manila is the cvapital of the philippines</p>
+		</article>
+	</section>
+	<footer>
+		<p>Write notes here</p>
+	</footer>
+	
+    <main role="main">
+        <div class="container marketing">
+            <div class="row featurette">
+                <div class="col-md-5">
+                    <img class="featurette-image img-fluid" src="https://i.pinimg.com/originals/85/47/c7/8547c7e9c863ecfb93a2313266902df3.jpg" alt="Img">
+                </div>
+                <div class="col-md-7">
+                    <h1><img src="Freigelogo.png" alt="imglogo">SABAY UNIVERSITY</h1>
+                    <p class="lead">Renowned for its commitment to excellence, the SABAY UNIVERSITY develops its students’ professional competence, character, and social transformation. Since its founding, SU offers its learners varied academic environments that foster academic excellence and lifelong learning, developing future professionals who will leave their marks as leaders in their respective fields.</p>
+                    <button class="btn btn-success" onclick="window.location.href = 'About.html';">Visit our Site</button>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+

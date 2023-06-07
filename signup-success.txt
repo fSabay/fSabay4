@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+<body>
+    
+    <h1>Signup</h1>
+    
+    <p>Signup successful.
+       You can now <a href="login.php">log in</a>.</p>
+	   
+    <a href="about.html"><img src="C:\xampp\htdocs\IT_ADET\form\portal.png" alt="about.html" style="width:500px;height:600px;"></a>
+</body>
+</html>

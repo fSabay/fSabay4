@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Calculate using Operators</title>
+    <link rel="shortcut icon" type="image/png" href="Freigelogo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="freigeStylesheet.css" />
+    <link rel="stylesheet" href="rating_percentage_operators.css" />
+    
+<style>
+section .container {
+            background-image: linear-gradient(to right, #ed92d5 0%, #00ffff 50%, #fca70d 100%);
+        }
+section {
+    position: relative;
+    width: 100%;
+}
+
+section .container {
+    position: relative;
+    width: min(100% - 5em, 854px);
+    height: min(100% - 3em, 854px);
+    margin: auto;
+    top: 40px;
+    padding: 50px;
+    border-radius: 30px;
+    transform: skewX(-5deg);
+    background-image: linear-gradient(to left, #ed92d5 0%, #00ffff 50%, #fca70d 100%);
+    box-shadow: 10px 10px 20px #aa9b9b;
+    text-align: center;
+}
+
+    section .container * {
+        transform: skewX(5deg);
+        margin: 5px;
+    }
+
+    section .container button {
+        width: 90px;
+        height: 40px;
+        border-radius: 5px;
+        cursor: pointer;
+        background: radial-gradient(#b6ff00,#808080);
+    }
+
+        section .container button:hover {
+            background: radial-gradient(#00ffff,#808080);
+            box-shadow: 5px 5px 10px #000000;
+        }
+
+        section .container button:active {
+            background: radial-gradient(#baffb7,#808080);
+            box-shadow: 1px 1px 10px #000000;
+            cursor: grabbing;
+        }
+
+    section .container input {
+        width: 50%;
+        height: 40px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    section .container #Calculate {
+        padding-bottom: 20px;
+    }
+
+    section .container h4 {
+        padding-top: 20px;
+        color: #4b309b;
+        font-size: larger;
+    }
+	.nav_bar {
+    background: #f5335cd1;
+    width: 100%;
+    text-align: center;
+    height: 70px;
+}
+
+    .nav_bar ul {
+        position: relative;
+        top: 9px;
+        display: inline-flex;
+        margin: 3px auto;
+        padding: 10px;
+    }
+    @media screen and (max-width: 845px){
+        .nav_bar {
+            background: #f5335cd1;
+            width: 100%;
+            text-align: center;
+            height: 70px;
+        }
+        .nav_bar ul {
+            padding: 0;
+        }
+        .nav_bar ul li a{
+            padding: 2px;
+        }
+    }
+.nav_bar ul li{
+    list-style: none;
+}
+.nav_bar ul li a{
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    color: #46fa2b;
+    font-weight: 900;
+    font-family: Arial;
+    font-size: 20px;
+    border-radius: 8px;
+}
+.nav_bar ul li a:hover{
+    color:#f7ffff;
+    background-image: linear-gradient(to right, #808080 0%, #6762eb 100%);
+    border-radius: 8px;
+}
+</style>	
+</head>
+<body>
+    <div class="nav_bar">
+        <ul>
+            <li><a href="Homepage.html">Home</a> </li>
+            <li><a href="About.html">About</a> </li>
+            <li><a href="Bulb onof.html">Bulb_on/off</a></li>
+            <li><a href="Calculate using Operators.html">Operators</a> </li>
+            <li><a href="Rating and Percentage.html">Rate/Percentage</a> </li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </div>
+    
+    <section>
+        <div class="container">
+            <h1 id="Calculate">Calculate using Operators</h1>
+            <label>Enter 1st Number:</label>
+            <input type="text" id="num1"><br><br>
+            <label>Enter 2nd Number:</label>
+            <input type="text" id="num2"><br><br>
+            <label>Enter 3rd Number:</label>
+            <input type="text" id="num3"><br><br>
+
+            <button onclick="add()">Add</button>
+            <button onclick="subtract()">Subtract</button>
+            <button onclick="multiply()">Multiply</button>
+            <button onclick="divide()">Divide</button>
+
+            <div>
+                <h3>Result:</h3>
+                <h4 id="result"></h4>
+                <hr />
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function add() {
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var z = document.getElementById("num3").value;
+            var total = parseFloat(x) + parseFloat(y) + parseFloat(z);
+            document.getElementById("result").innerHTML = total;
+        }
+
+        function subtract() {
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var z = document.getElementById("num3").value;
+            var total = parseFloat(x) - parseFloat(y) - parseFloat(z);
+            document.getElementById("result").innerHTML = total;
+        }
+
+        function multiply() {
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var z = document.getElementById("num3").value;
+            var total = parseFloat(x) * parseFloat(y) * parseFloat(z);
+            document.getElementById("result").innerHTML = total;
+        }
+
+        function divide() {
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var z = document.getElementById("num3").value;
+            var total = parseFloat(x) / parseFloat(y) / parseFloat(z);
+            document.getElementById("result").innerHTML = total;
+        }
+    </script>
+</body>
+</html>
